@@ -57,8 +57,8 @@ int ArchivoArticulo::getCantidad()
     fclose(pFile);
     return cantidad;
 }
-bool guardarModificacion(Articulo art, int posicion){
-   FILE* pFile = fopen("Articulos,dat","rb+");
+bool ArchivoArticulo::guardarModificacion(Articulo art, int posicion){
+   FILE* pFile = fopen("Articulos.dat","rb+");
    if(pFile == nullptr){
     cout << "No se encontro Archivo";
     return false;
