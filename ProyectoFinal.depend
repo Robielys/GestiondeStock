@@ -1,0 +1,70 @@
+# depslib dependency file v1.0
+1666023777 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\fecha.cpp
+	"Fecha.h"
+	<ctime>
+
+1666023875 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\fecha.h
+	<string>
+
+1666466595 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\main.cpp
+	<iostream>
+	"Fecha.h"
+	"Funciones.h"
+	"Domicilio.h"
+	"Articulo.h"
+
+1666906691 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\funciones.h
+
+1666905033 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\funciones.cpp
+	<iostream>
+	<string.h>
+	"rlutil.h"
+	"Domicilio.h"
+	"Cliente.h"
+	"Articulo.h"
+	"Funciones.h"
+	"ArchivoArticulo.h"
+
+1666203775 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\domicilio.h
+
+1666212318 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\domicilio.cpp
+	<iostream>
+	<string.h>
+	"Domicilio.h"
+
+1666196231 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1666213841 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\cliente.h
+
+1666213896 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\cliente.cpp
+	<iostream>
+	<string.h>
+	"Cliente.h"
+
+1666906691 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\articulo.cpp
+	<iostream>
+	<string.h>
+	"Articulo.h"
+	"ArchivoArticulo.h"
+
+1666906358 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\articulo.h
+
+1666904356 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.cpp
+	<iostream>
+	"ArchivoArticulo.h"
+
+1666903920 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.h
+	"Articulo.h"
+
