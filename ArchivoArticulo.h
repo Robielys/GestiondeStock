@@ -5,11 +5,13 @@
 class ArchivoArticulo{
 public:
     void listar(Articulo* art, int nroRegistro);
+    Articulo BuscarArt(int nroID);
     bool guardar(Articulo art);
     bool guardarModificacion(Articulo art, int posicion);
     int buscar(int ID);
     bool baja(int pos);
     int getCantidad();
+    int CrearID();
 
 
 };

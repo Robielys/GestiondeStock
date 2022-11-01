@@ -2,6 +2,11 @@
 #include<iostream>
 using namespace std;
 #include "ArchivoArticulo.h"
+#include "Articulo.h"
+
+int ArchivoArticulo::CrearID(){
+return getCantidad() + 1;
+}
 void ArchivoArticulo::listar(Articulo* art, int nroRegistro)
 {
     FILE* pFile;
@@ -13,8 +18,23 @@ void ArchivoArticulo::listar(Articulo* art, int nroRegistro)
     fread(art, sizeof(Articulo), nroRegistro, pFile);
     fclose(pFile);
 }
+Articulo ArchivoArticulo::BuscarArt(int nroID){
+    Articulo art;
+    FILE* pFile;
+    pFile = fopen("Articulos.dat", "rb");
+    if (pFile == NULL)
+    {
+        exit(100);
+    }
+    fseek(pFile, nroID * sizeof(Articulo),SEEK_SET);
+    fread(&art, sizeof(Articulo), 1, pFile);
+    fclose(pFile);
+
+    return art;
+}
 bool ArchivoArticulo::guardar(Articulo art)
 {
+    art.setID(CrearID());
     FILE* pFile;
     pFile = fopen("Articulos.dat", "ab");
     if (pFile == NULL)
@@ -25,20 +45,27 @@ bool ArchivoArticulo::guardar(Articulo art)
     fclose(pFile);
     return true;
 }
-/*int ArchivoArticulo::buscar(int ID)
+int ArchivoArticulo::buscar(int ID)
 {
+    int i = 0;
     Articulo aux;
-    int cantArticulos = ArchivoArticulo.getCantidad();
-    for (int i = 0; i < cantArticulos; i++)
+   FILE* pFile;
+    pFile = fopen("Articulos.dat", "rb");
+    if (pFile == NULL)
     {
-        aux = ArchivoArticulo.listar(i);
+        return false;
+    }
+    while(fread(&aux,sizeof(Articulo),1,pFile)==1)
+    {
         if (aux.getID() == ID)
         {
+            fclose(pFile);
             return i;
         }
+        i++;
     }
     return -1;
-}*/
+}
 
 bool ArchivoArticulo::baja(int pos){
 }
@@ -61,7 +88,7 @@ bool ArchivoArticulo::guardarModificacion(Articulo art, int posicion){
    FILE* pFile = fopen("Articulos.dat","rb+");
    if(pFile == nullptr){
     cout << "No se encontro Archivo";
-    return false;
+    exit(10);
    }
    fseek(pFile,posicion * sizeof (Articulo),SEEK_SET);
    fwrite(&art,sizeof(Articulo),1,pFile);

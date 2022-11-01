@@ -12,13 +12,14 @@ private:
     int _Stock;
     bool _Estado;
 public:
-    void setID();
+    void setID(int ID);
     void setCategoria(string Categoria);
     void setModelo(string Modelo);
     void setTipoDeMaterial(string TipoDeMaterial);
     void setCapacidad(int Capacidad);
     void setDiametro(int Diametro);
     void setStock(int Stock);
+    void desStock(int stock);
     void setEstado(bool Estado);
     int getID();
     string getCategoria();
@@ -29,7 +30,7 @@ public:
     int getStock();
     bool getEstado();
     void Cargar();
-    void Mostrar();
+    void Mostrar(int Fila);
     bool modificar();
 };
 

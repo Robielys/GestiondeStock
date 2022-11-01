@@ -290,14 +290,14 @@ void OpcionSeleccionadaArticulos(int opcionA)
     {
     case 1:
     {
-          ArchivoArticulo art;
+        ArchivoArticulo art;
         int cantidad = art.getCantidad();
         Articulo* Art= new Articulo[cantidad];
 
         art.listar(Art, cantidad);
         MembreteArticulo();
         for(int i=0;i<cantidad;i++){
-            Art[i].Mostrar();
+            Art[i].Mostrar(i);
         }
         delete[] Art;
 
@@ -312,7 +312,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
         ArchivoArticulo CarArt;
         Art.Cargar();
         if(CarArt.guardar(Art)){
-            cout << "Articulo guardado sastifactoriamente";
+            cout << "Articulo guardado sastifactoriamente" << endl;
         }
         else{
             cout << "No se pudo guardar el articulo" << endl;
@@ -331,11 +331,88 @@ void OpcionSeleccionadaArticulos(int opcionA)
     break;
 
     case 4:
-    {
+        {
+            ArchivoArticulo CarArt;
+            Articulo Art;
+            int ID, posicion, can, opcion;
+            cout << " ¿Que accion desea realizar?"<< endl;
+            cout << " 1.Aumentar Stock"<< endl;
+            cout << " 2.Disminuir Stock" << endl;
+            cin >> opcion;
+            if (opcion == 1)
+            {
+                cout << "Ingresar ID que desea Modificar: ";
+                cin >> ID;
 
-        system("pause");
-    }
-    break;
+                posicion =CarArt.buscar(ID);
+
+                if(posicion != -1)
+                {
+                    cout << "si existe" << endl;
+
+                    Art=CarArt.BuscarArt(posicion);
+                    MembreteArticulo();
+                    Art.Mostrar(0);
+                    cout << "Cantidad a ingresar: ";
+                    cin >> can;
+                    Art.setStock(can);
+                    if(CarArt.guardarModificacion(Art, posicion))
+                    {
+                        cout<< "se modifico correctamente" <<endl;
+                    }
+                    else
+                    {
+                        cout << "no se guardo" << endl;
+
+                    }
+                }
+                else
+                {
+                    cout << "No existe ID";
+                }
+            }
+            else
+            {
+                if (opcion == 2)
+                {
+                    cout << "Ingresar ID que desea Modificar: ";
+                    cin >> ID;
+
+                    posicion =CarArt.buscar(ID);
+
+                    if(posicion != -1)
+                    {
+                        cout << "si existe" << endl;
+
+                        Art=CarArt.BuscarArt(posicion);
+                        MembreteArticulo();
+                        Art.Mostrar(0);
+                        cout << "Cantidad a ingresar: ";
+                        cin >> can;
+                        Art.desStock(can);
+                        if(CarArt.guardarModificacion(Art, posicion))
+                        {
+                            cout<< "se modifico correctamente" <<endl;
+                        }
+                        else
+                        {
+                            cout << "no se guardo" << endl;
+
+                        }
+                    }
+                    else
+                    {
+                        cout << "No existe ID";
+                    }
+                }
+                else
+                {
+
+                }
+            }
+            system("pause");
+        }
+        break;
 
     case 0:
     {
@@ -346,8 +423,21 @@ void OpcionSeleccionadaArticulos(int opcionA)
 }
 
 void MembreteArticulo(){
+    rlutil::cls();
     cout << " --------------------------------------------------------------------"<< endl;
-    cout << " | "<< "ID" << " | " << "Categoria" << " | " << "Modelo" << " | " << "Capacidad"
-    << " | " << "Material" << " | " << "Diametro" << " | " << "Stock" << "|"<< endl;
+    cout << " | "<< "ID" << " | " << "Categoria" << " | " << "Modelo" << " | " << "Material" << " | " << "Capacidad"
+    << " | " << "Diametro" << " | " << "Stock" << "|"<< endl;
     cout << " --------------------------------------------------------------------"<< endl;
+}
+
+string espacio(int t, int v){
+    int e = 0;
+    string te="";
+    e = v + t;
+
+    for(int i=0;i<e;i++){
+        te= te+" ";
+
+    }
+    return te;
 }

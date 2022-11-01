@@ -13,9 +13,9 @@
 	"Domicilio.h"
 	"Articulo.h"
 
-1666906691 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\funciones.h
+1667155754 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\funciones.h
 
-1666905033 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\funciones.cpp
+1667329015 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\funciones.cpp
 	<iostream>
 	<string.h>
 	"rlutil.h"
@@ -53,18 +53,21 @@
 	<string.h>
 	"Cliente.h"
 
-1666906691 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\articulo.cpp
+1667337959 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\articulo.cpp
 	<iostream>
 	<string.h>
 	"Articulo.h"
 	"ArchivoArticulo.h"
+	"rlutil.h"
+	"Funciones.h"
 
-1666906358 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\articulo.h
+1667328285 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\articulo.h
 
-1666904356 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.cpp
+1667145641 source:c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.cpp
 	<iostream>
 	"ArchivoArticulo.h"
+	"Articulo.h"
 
-1666903920 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.h
+1667144969 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.h
 	"Articulo.h"
 
