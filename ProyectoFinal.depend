@@ -71,3 +71,75 @@
 1667144969 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.h
 	"Articulo.h"
 
+1667339363 source:c:\users\robie\onedrive\documentos\github\gestiondestock\archivoarticulo.cpp
+	<iostream>
+	"ArchivoArticulo.h"
+	"Articulo.h"
+
+1667339363 c:\users\robie\onedrive\documentos\github\gestiondestock\archivoarticulo.h
+	"Articulo.h"
+
+1667340320 c:\users\robie\onedrive\documentos\github\gestiondestock\articulo.h
+
+1667340320 source:c:\users\robie\onedrive\documentos\github\gestiondestock\articulo.cpp
+	<iostream>
+	<string.h>
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"rlutil.h"
+	"Funciones.h"
+
+1666196232 c:\users\robie\onedrive\documentos\github\gestiondestock\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1667339363 c:\users\robie\onedrive\documentos\github\gestiondestock\funciones.h
+
+1666213898 source:c:\users\robie\onedrive\documentos\github\gestiondestock\cliente.cpp
+	<iostream>
+	<string.h>
+	"Cliente.h"
+
+1666213842 c:\users\robie\onedrive\documentos\github\gestiondestock\cliente.h
+
+1666212320 source:c:\users\robie\onedrive\documentos\github\gestiondestock\domicilio.cpp
+	<iostream>
+	<string.h>
+	"Domicilio.h"
+
+1666203776 c:\users\robie\onedrive\documentos\github\gestiondestock\domicilio.h
+
+1666023778 source:c:\users\robie\onedrive\documentos\github\gestiondestock\fecha.cpp
+	"Fecha.h"
+	<ctime>
+
+1666023876 c:\users\robie\onedrive\documentos\github\gestiondestock\fecha.h
+	<string>
+
+1667340329 source:c:\users\robie\onedrive\documentos\github\gestiondestock\funciones.cpp
+	<iostream>
+	<string.h>
+	"rlutil.h"
+	"Domicilio.h"
+	"Cliente.h"
+	"Articulo.h"
+	"Funciones.h"
+	"ArchivoArticulo.h"
+
+1666466596 source:c:\users\robie\onedrive\documentos\github\gestiondestock\main.cpp
+	<iostream>
+	"Fecha.h"
+	"Funciones.h"
+	"Domicilio.h"
+	"Articulo.h"
+

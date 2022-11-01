@@ -97,7 +97,7 @@ void Articulo::Cargar()
     cin >> _Stock;
     _Estado = true;
 }
-void Articulo::Mostrar(int Fila)
+void Articulo::Mostrar()
 {
     if(_Estado == true)
     {
