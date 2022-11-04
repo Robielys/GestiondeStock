@@ -30,7 +30,7 @@ public:
     int getStock();
     bool getEstado();
     void Cargar();
-    void Mostrar(int Fila);
+    void Mostrar();
     bool modificar();
 };
 
