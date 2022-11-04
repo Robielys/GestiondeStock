@@ -13,7 +13,9 @@ void OpcionSeleccionadaCliente(int opcionC);
 void OpcionSeleccionadaCategoria(int opcionCa);
 void OpcionSeleccionadaArticulos(int opcionA);
 void MembreteArticulo();
+void MembreteCliente();
 string espacio(int t, int v);
+
 
 
 #endif // FUNCIONES_H_INCLUDED

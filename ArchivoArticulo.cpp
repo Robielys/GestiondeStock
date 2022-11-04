@@ -67,8 +67,6 @@ int ArchivoArticulo::buscar(int ID)
     return -1;
 }
 
-bool ArchivoArticulo::baja(int pos){
-}
 int ArchivoArticulo::getCantidad()
 {
     int cantidad = 0;

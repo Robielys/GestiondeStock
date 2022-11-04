@@ -71,3 +71,88 @@
 1667144969 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.h
 	"Articulo.h"
 
+1667507077 source:c:\users\agnostic\documents\github\gestiondestock\archivoarticulo.cpp
+	<iostream>
+	"ArchivoArticulo.h"
+	"Articulo.h"
+
+1667144969 c:\users\agnostic\documents\github\gestiondestock\archivoarticulo.h
+	"Articulo.h"
+
+1667328285 c:\users\agnostic\documents\github\gestiondestock\articulo.h
+
+1667511738 source:c:\users\agnostic\documents\github\gestiondestock\articulo.cpp
+	<iostream>
+	<string.h>
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"rlutil.h"
+	"Funciones.h"
+
+1666196231 c:\users\agnostic\documents\github\gestiondestock\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1667508136 c:\users\agnostic\documents\github\gestiondestock\funciones.h
+
+1667513359 source:c:\users\agnostic\documents\github\gestiondestock\cliente.cpp
+	<iostream>
+	<string.h>
+	"Cliente.h"
+	"ArchivoCliente.h"
+	"Funciones.h"
+	"rlutil.h"
+
+1667507077 c:\users\agnostic\documents\github\gestiondestock\cliente.h
+
+1666212318 source:c:\users\agnostic\documents\github\gestiondestock\domicilio.cpp
+	<iostream>
+	<string.h>
+	"Domicilio.h"
+
+1666203775 c:\users\agnostic\documents\github\gestiondestock\domicilio.h
+
+1666023777 source:c:\users\agnostic\documents\github\gestiondestock\fecha.cpp
+	"Fecha.h"
+	<ctime>
+
+1666023875 c:\users\agnostic\documents\github\gestiondestock\fecha.h
+	<string>
+
+1667516973 source:c:\users\agnostic\documents\github\gestiondestock\funciones.cpp
+	<iostream>
+	<string.h>
+	"rlutil.h"
+	"Domicilio.h"
+	"Cliente.h"
+	"Articulo.h"
+	"Funciones.h"
+	"ArchivoArticulo.h"
+	"Cliente.h"
+	"ArchivoCliente.h"
+
+1666466595 source:c:\users\agnostic\documents\github\gestiondestock\main.cpp
+	<iostream>
+	"Fecha.h"
+	"Funciones.h"
+	"Domicilio.h"
+	"Articulo.h"
+
+1667511153 source:c:\users\agnostic\documents\github\gestiondestock\archivocliente.cpp
+	<iostream>
+	"Cliente.h"
+	"ArchivoCliente.h"
+
+1667516566 c:\users\agnostic\documents\github\gestiondestock\archivocliente.h
+	"Cliente.h"
+
