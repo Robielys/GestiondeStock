@@ -164,7 +164,7 @@
 1667339363 c:\users\robie\onedrive\documentos\github\gestiondestock\archivoarticulo.h
 	"Articulo.h"
 
-1667340320 c:\users\robie\onedrive\documentos\github\gestiondestock\articulo.h
+1667524591 c:\users\robie\onedrive\documentos\github\gestiondestock\articulo.h
 
 1667523380 source:c:\users\robie\onedrive\documentos\github\gestiondestock\archivocliente.cpp
 	<iostream>
@@ -222,7 +222,7 @@
 1666023876 c:\users\robie\onedrive\documentos\github\gestiondestock\fecha.h
 	<string>
 
-1667523380 source:c:\users\robie\onedrive\documentos\github\gestiondestock\funciones.cpp
+1667524803 source:c:\users\robie\onedrive\documentos\github\gestiondestock\funciones.cpp
 	<iostream>
 	<string.h>
 	"rlutil.h"

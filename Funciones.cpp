@@ -192,6 +192,7 @@ void OpcionSeleccionadaMuestras(int opcionM)
 
     case 3:
     {
+
         rlutil::cls();
 
         system("pause");
@@ -448,7 +449,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
         MembreteArticulo();
         for(int i=0; i<cantidad; i++)
         {
-            Art[i].Mostrar(i);
+            Art[i].Mostrar();
         }
         delete[] Art;
 
@@ -479,7 +480,31 @@ void OpcionSeleccionadaArticulos(int opcionA)
     case 3:
     {
         rlutil::cls();
+         ArchivoArticulo CarArt;
+            Articulo Art;
+            int ID, posicion;
+                cout << "Ingresar ID del articulo que desea dar de baja: ";
+                cin >> ID;
 
+                posicion =CarArt.buscar(ID);
+
+                if(posicion != -1)
+                {
+                    cout << "si existe" << endl;
+
+                    Art=CarArt.BuscarArt(posicion);
+                    MembreteArticulo();
+                    Art.Mostrar();
+                    Art.setEstado(false);
+                    if(CarArt.guardarModificacion(Art, posicion))
+                    {
+                        cout<< "se dio de baja correctamente" <<endl;
+                    }
+                    else
+                    {
+                        cout << "ocurrio un error inesperado y no se pudo dar de baja" << endl;
+                    }
+                }
         system("pause");
     }
     break;
@@ -507,7 +532,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
 
                 Art=CarArt.BuscarArt(posicion);
                 MembreteArticulo();
-                Art.Mostrar(0);
+                Art.Mostrar();
                 cout << "Cantidad a ingresar: ";
                 cin >> can;
                 Art.setStock(can);
@@ -541,7 +566,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
 
                     Art=CarArt.BuscarArt(posicion);
                     MembreteArticulo();
-                    Art.Mostrar(0);
+                    Art.Mostrar();
                     cout << "Cantidad a ingresar: ";
                     cin >> can;
                     Art.desStock(can);
