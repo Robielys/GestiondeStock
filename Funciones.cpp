@@ -8,6 +8,7 @@
 #include"ArchivoArticulo.h"
 #include "Cliente.h"
 #include "ArchivoCliente.h"
+#include "Fecha.h"
 
 using namespace std;
 
@@ -185,6 +186,7 @@ void OpcionSeleccionadaMuestras(int opcionM)
     case 2:
     {
         rlutil::cls();
+        EncabezadoPedidoMuestra();
 
         system("pause");
     }
@@ -631,6 +633,23 @@ void MembreteCliente()
     rlutil::cls();
     cout << " ---------------------------------------------------------------------"<< endl;
     cout << " | "<< "ID" << " |   " << "Nombre Empresa" << " |  " << "Cuit" << "      |         " << "Correo" << "              | " << endl;
+    cout << " ---------------------------------------------------------------------"<< endl;
+
+}
+
+void EncabezadoPedidoMuestra(){
+    Fecha feHoy;
+    rlutil::cls();
+    cout << " Pedido de muestra" << endl;
+    cout << endl;
+    cout << " ID: " << endl;
+    cout << " Fecha de pedido: " << feHoy.toString() << endl;
+    cout << " Datos del cliente: " << endl;
+    cout << " ---------------------------------------------------------------------"<< endl;
+    cout << " Nombre: " << "" << "Cuit: " << "" << "Domicilio: " << " " << endl;
+    cout << " ---------------------------------------------------------------------"<< endl;
+    cout << " | "<< "ID" << " | " << "Categoria" << " | " << "Modelo" << " | " << "Capacidad"
+         << " | " << "Diametro" << " | " << "Cantidad" << "|"<< endl;
     cout << " ---------------------------------------------------------------------"<< endl;
 
 }

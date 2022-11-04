@@ -15,6 +15,7 @@ void OpcionSeleccionadaArticulos(int opcionA);
 void MembreteArticulo();
 void MembreteCliente();
 string espacio(int t, int v);
+void EncabezadoPedidoMuestra();
 
 
 
