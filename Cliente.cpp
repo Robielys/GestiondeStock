@@ -61,13 +61,18 @@ void Cliente::Cargar()
     cin >> _Correo;
     _Estado = true;
 }
-void Cliente::Mostrar()
+void Cliente::Mostrar(int c)
 {
     if(_Estado == true)
     {
-        cout << espacio(1,2) <<_ID << espacio(sizeof(Cliente)/30,0) << _NombreEmpresa << espacio(sizeof(Cliente)/22,0)
-        << _Cuit << espacio(sizeof(Cliente)/20,0) << _Correo << endl;
+        if(c==1){
+        cout << espacio(1,2) <<_ID << espacio(sizeof(Cliente)/55,0) << _NombreEmpresa << espacio(sizeof(Cliente)/70,0)
+        << _Cuit << espacio(sizeof(Cliente)/60,0) << _Correo << endl;
         /*cout << _ID << _NombreEmpresa << _Cuit << _Correo << endl;*/
+        }
+        else{
+            cout << "  Cuit: " << _Cuit << "  Empresa: " << _NombreEmpresa << "  Domicilio: " <<_Correo << endl;
+        }
     }
 
 }

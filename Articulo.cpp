@@ -116,7 +116,7 @@ void Articulo::Mostrar()
             if(cat == "Tapa" || cat == "Pote")
             {
                 cout << _Categoria << espacio(sizeof(Articulo)/22,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/30,0) << _Stock<< endl;
+                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
 
             }
             else
@@ -124,10 +124,10 @@ void Articulo::Mostrar()
                 if(cat == "Cremera")
                 {
                     cout << _Categoria << espacio(sizeof(Articulo)/40,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                         << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/30,0) << _Stock<< endl;
+                         << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
                 }else{
                 cout << _Categoria << espacio(sizeof(Articulo)/30,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/30,0) << _Stock<< endl;
+                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
                 }
             }
         }

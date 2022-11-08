@@ -186,25 +186,36 @@ void OpcionSeleccionadaMuestras(int opcionM)
     case 2:
     {
         ArchivoCliente cli;
-        Articulo art;
+        Cliente art;
         rlutil::cls();
-        int numCliente, i, numArticulo;
+        int numCliente,numArticulo, posicion;
         cout << "Ingrese el numero de ID del cliente: ";
         cin >> numCliente;
-        cli.buscar(numCliente);
-        art.Mostrar();
-       /*if(numCliente==true){
-            do{
-               cout<< "Ingrese el numero de articulo: ";
-               cin >> numArticulo;
-               buscarArticulo(numArticulo);
-               mostrar();
-
-            }while(i ==0);
-        }*/
+        posicion =cli.buscar(numCliente);
+        art=cli.BuscarCli(posicion);
         EncabezadoPedidoMuestra();
+        art.Mostrar(0);
+        if(numCliente==true){
+            Articulo Art;
+            ArchivoArticulo ArcArt;
+            int pos=11,pos2=11;
+            do{
+               rlutil::locate(1,8);
+               MembreteArticulo();
+               rlutil::locate(1,pos2);
+               cout<< "  Ingrese el numero de articulo: ";
+               cin >> numArticulo;
+               posicion = ArcArt.buscar(numArticulo);
+               Art=ArcArt.BuscarArt(posicion);
+               rlutil::locate(1,pos);
+               Art.Mostrar();
+                cout << endl;
+                pos++;
+                pos2++;
+            }while(numArticulo !=0);
+        }
+                system("pause");
 
-        system("pause");
     }
     break;
 
@@ -249,7 +260,7 @@ void OpcionSeleccionadaCliente(int opcionC)
         MembreteCliente();
         for(int i=0; i<cantidad; i++)
         {
-            Cli[i].Mostrar();
+            Cli[i].Mostrar(1);
         }
         delete[] Cli;
 
@@ -292,7 +303,7 @@ void OpcionSeleccionadaCliente(int opcionC)
 
                 cli=CarCli.BuscarCli(posicion);
                 MembreteCliente();
-                cli.Mostrar();
+                cli.Mostrar(1);
                 cli.setEstado(false);
                 if(CarCli.guardarModificacion(cli, posicion))
                 {
@@ -338,7 +349,7 @@ void OpcionSeleccionadaCliente(int opcionC)
 
                 cli=CarCli.BuscarCli(posicion);
                 MembreteCliente();
-                cli.Mostrar();
+                cli.Mostrar(1);
                 cout << "Ingresar el Correo: ";
                 cin >> can;
                 cli.setCorreo(can);
@@ -372,7 +383,7 @@ void OpcionSeleccionadaCliente(int opcionC)
 
                     cli=CarCli.BuscarCli(posicion);
                     MembreteCliente();
-                    cli.Mostrar();
+                    cli.Mostrar(1);
                     cout << "Cantidad a ingresar: ";
                     cin >> can;
                     cli.setNombreEmpresa(can);
@@ -622,7 +633,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
 
 void MembreteArticulo()
 {
-    rlutil::cls();
+    ///rlutil::cls();
     cout << " --------------------------------------------------------------------"<< endl;
     cout << " | "<< "ID" << " | " << "Categoria" << " | " << "Modelo" << " | " << "Material" << " | " << "Capacidad"
          << " | " << "Diametro" << " | " << "Stock" << "|"<< endl;
@@ -648,7 +659,7 @@ void MembreteCliente()
 
     rlutil::cls();
     cout << " ---------------------------------------------------------------------"<< endl;
-    cout << " | "<< "ID" << " |   " << "Nombre Empresa" << " |  " << "Cuit" << "      |         " << "Correo" << "              | " << endl;
+    cout << " | "<< "ID" << " |   " << "Nombre Empresa" << " |     " << "Cuit" << "   |         " << "Correo" << "              | " << endl;
     cout << " ---------------------------------------------------------------------"<< endl;
 
 }
@@ -661,11 +672,6 @@ void EncabezadoPedidoMuestra(){
     cout << " ID: " << endl;
     cout << " Fecha de pedido: " << feHoy.toString() << endl;
     cout << " Datos del cliente: " << endl;
-    cout << " ---------------------------------------------------------------------"<< endl;
-    cout << " Nombre: " << "" << "Cuit: " << "" << "Domicilio: " << " " << endl;
-    cout << " ---------------------------------------------------------------------"<< endl;
-    cout << " | "<< "ID" << " | " << "Categoria" << " | " << "Modelo" << " | " << "Capacidad"
-         << " | " << "Diametro" << " | " << "Cantidad" << "|"<< endl;
     cout << " ---------------------------------------------------------------------"<< endl;
 
 }
