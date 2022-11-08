@@ -50,17 +50,17 @@ bool Domicilio::getEstado(){
 }
 void Domicilio::Cargar(){
     cout << "ingresar el Pais: ";
-    cin >> _Pais;
+    cin.getline(_Pais,50,'\n');
     cout << "ingresar la Provincia: ";
-    cin >> _Provincia;
+    cin.getline(_Provincia,50,'\n');
     cout << "ingresar la Localidad: ";
-    cin >> _Localidad;
+    cin.getline(_Localidad,50,'\n');
     cout << "ingresar la Calle: ";
-    cin >> _Calle;
+    cin.getline(_Calle,50,'\n');
     cout << "ingresar La Altura: ";
     cin >> _Altura;
     cout << "ingresar el Codigo Postal: ";
-    cin >> _CP;
+    cin >>_CP;
     _Estado= true;
 
 }
@@ -74,3 +74,10 @@ void Domicilio::Mostrar(){
     cout << _CP << endl;
     }
 }
+
+/*string Domicilio::toString(string p,string pr,string l,string c,string a){
+    string domicilio;
+    domicilio=strcpy(_Pais,p)+ "," + strcpy(_Provincia,pr)+ "," + strcpy(_Localidad,l)+ ","+ strcpy(_Calle,c)+ "," + strcpy(_Altura,a);
+    return domicilio
+
+}*/

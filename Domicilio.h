@@ -29,6 +29,7 @@ public:
     bool getEstado();
     void Cargar();
     void Mostrar();
+    string toString(string p,string pr,string l,string c, string a);
 };
 
 #endif // DOMICILIO_H_INCLUDED

@@ -185,7 +185,23 @@ void OpcionSeleccionadaMuestras(int opcionM)
 
     case 2:
     {
+        ArchivoCliente cli;
+        Articulo art;
         rlutil::cls();
+        int numCliente, i, numArticulo;
+        cout << "Ingrese el numero de ID del cliente: ";
+        cin >> numCliente;
+        cli.buscar(numCliente);
+        art.Mostrar();
+       /*if(numCliente==true){
+            do{
+               cout<< "Ingrese el numero de articulo: ";
+               cin >> numArticulo;
+               buscarArticulo(numArticulo);
+               mostrar();
+
+            }while(i ==0);
+        }*/
         EncabezadoPedidoMuestra();
 
         system("pause");

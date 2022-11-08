@@ -1,6 +1,8 @@
 #ifndef ARTICULO_H_INCLUDED
 #define ARTICULO_H_INCLUDED
-
+#include <cstring>
+#include<string.h>
+using namespace std;
 class Articulo{
 private:
     int _ID;
