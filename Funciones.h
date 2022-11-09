@@ -13,9 +13,11 @@ void OpcionSeleccionadaCliente(int opcionC);
 void OpcionSeleccionadaCategoria(int opcionCa);
 void OpcionSeleccionadaArticulos(int opcionA);
 void MembreteArticulo();
+void MembreteArticulo2();
 void MembreteCliente();
 string espacio(int t, int v);
 void EncabezadoPedidoMuestra();
+bool ArchivoCsv(fstream MyFile);
 
 
 

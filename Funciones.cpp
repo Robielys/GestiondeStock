@@ -9,6 +9,8 @@
 #include "Cliente.h"
 #include "ArchivoCliente.h"
 #include "Fecha.h"
+#include <fstream>
+fstream MyFile;
 
 using namespace std;
 
@@ -184,11 +186,11 @@ void OpcionSeleccionadaMuestras(int opcionM)
     break;
 
     case 2:
-    {
+        {
         ArchivoCliente cli;
         Cliente art;
         rlutil::cls();
-        int numCliente,numArticulo, posicion;
+        int numCliente,numArticulo,cantArticulos, posicion;
         cout << "Ingrese el numero de ID del cliente: ";
         cin >> numCliente;
         posicion =cli.buscar(numCliente);
@@ -198,22 +200,31 @@ void OpcionSeleccionadaMuestras(int opcionM)
         if(numCliente==true){
             Articulo Art;
             ArchivoArticulo ArcArt;
-            int pos=11,pos2=11;
+            int pos=11,pos2=11, pos3=11;
             do{
                rlutil::locate(1,8);
-               MembreteArticulo();
+               MembreteArticulo2();
                rlutil::locate(1,pos2);
-               cout<< "  Ingrese el numero de articulo: ";
+               cout << "Ingrese el numero de articulo:";
                cin >> numArticulo;
+               rlutil::locate(32,pos3);
+               cout << " Ingrese cantidad de la muestra:";
+               cin >> cantArticulos;
                posicion = ArcArt.buscar(numArticulo);
                Art=ArcArt.BuscarArt(posicion);
+               Art.desStock(cantArticulos);
+               ArcArt.guardarModificacion(Art,posicion);
                rlutil::locate(1,pos);
-               Art.Mostrar();
+               Art.Mostrar(cantArticulos);
                 cout << endl;
                 pos++;
                 pos2++;
+                pos3++;
+
             }while(numArticulo !=0);
+
         }
+        MyFile.close();
                 system("pause");
 
     }
@@ -640,6 +651,15 @@ void MembreteArticulo()
     cout << " --------------------------------------------------------------------"<< endl;
 }
 
+void MembreteArticulo2()
+{
+    ///rlutil::cls();
+    cout << " -----------------------------------------------------------------------"<< endl;
+    cout << " | "<< "ID" << " | " << "Categoria" << " | " << "Modelo" << " | " << "Material" << " | " << "Capacidad"
+         << " | " << "Diametro" << " | " << "Cantidad" << "|"<< endl;
+    cout << " -----------------------------------------------------------------------"<< endl;
+}
+
 string espacio(int t, int v)
 {
     int e = 0;
@@ -674,4 +694,13 @@ void EncabezadoPedidoMuestra(){
     cout << " Datos del cliente: " << endl;
     cout << " ---------------------------------------------------------------------"<< endl;
 
+}
+
+bool ArchivoCsv(fstream MyFile){
+    fstream ReadFile("dato.csv",ios::in);
+    if(!ReadFile){
+        cout <<"creando registro..."<< endl;
+        fstream CreateFile("data.csv", ios::out);
+    }
+    MyFile.open("data.csv",ios::app);
 }

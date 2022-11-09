@@ -33,6 +33,7 @@ public:
     bool getEstado();
     void Cargar();
     void Mostrar();
+    void Mostrar(int cant);
     bool modificar();
 };
 

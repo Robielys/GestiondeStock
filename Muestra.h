@@ -6,11 +6,14 @@
 
 class Muestra{
 private:
-    ArchivoArticulo art;
-    Fecha fechaHoy;
-    ArchivoCliente cli;
+    int _ID;
+    Fecha _fechaHoy;
+    char _NombreCliente[50];
 public:
-    void cargar();
+    void setID(int id);
+    void setNombreCliente(string NombreCliente);
+    int getID();
+    string getNombreCliente();
     void mostrar();
 
 };
