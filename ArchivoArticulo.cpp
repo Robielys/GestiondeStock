@@ -66,6 +66,27 @@ int ArchivoArticulo::buscar(int ID)
     }
     return -1;
 }
+string ArchivoArticulo::buscar1(string ID)
+{
+    int i = 0;
+    Articulo aux;
+   FILE* pFile;
+    pFile = fopen("Articulos.dat", "rb");
+    if (pFile == NULL)
+    {
+        exit(1);
+    }
+    while(fread(&aux,sizeof(Articulo),1,pFile)==1)
+    {
+        if (aux.getModelo() == ID)
+        {
+            fclose(pFile);
+            return ID ;
+        }
+        i++;
+    }
+}
+
 
 int ArchivoArticulo::getCantidad()
 {

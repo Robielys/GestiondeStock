@@ -9,6 +9,7 @@ public:
     bool guardar(Articulo art);
     bool guardarModificacion(Articulo art, int posicion);
     int buscar(int ID);
+    string buscar1(string ID);
     bool baja(int pos);
     int getCantidad();
     int CrearID();
