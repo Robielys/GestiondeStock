@@ -41,7 +41,7 @@ void Articulo::desStock(int stock){
     if(_Stock >= stock){
         _Stock -= stock;
     }else{
-        cout << "Cantidad ingresa es mayor al stock disponible"<< endl;
+        cout << "Cantidad ingresada es mayor al stock disponible"<< endl;
     }
 }
 void Articulo::setEstado(bool Estado)

@@ -9,6 +9,8 @@
 #include "Cliente.h"
 #include "ArchivoCliente.h"
 #include "Fecha.h"
+#include "ArchivoMuestra.h"
+#include "Muestra.h"
 #include <fstream>
 fstream MyFile;
 
@@ -123,8 +125,6 @@ void SubMenuMuestras()
     cout<< "-----------" << " Menu de Muestras " << "-----------" << endl;
     cout<< " 1.Lista de pedidos de muestras" << endl;
     cout<< " 2.Cargar nueva muestra" << endl;
-    cout<< " 3.Dar de baja un pedido de muestras" << endl;
-    cout<< " 4.Modificar un pedido de muestras" << endl;
     cout<< "----------------------------------------" << endl;
     cout<< " 0.Volver al menu principal" << endl;
     cout<< endl;
@@ -179,6 +179,17 @@ void OpcionSeleccionadaMuestras(int opcionM)
     case 1:
     {
         rlutil::cls();
+        ArchivoMuestra muest;
+        int cantidad = muest.getCantidad();
+        Muestra* Muest= new Muestra[cantidad];
+
+        muest.listar(Muest, cantidad);
+        MembreteArchivoMuestra();
+        for(int i=0; i<cantidad; i++)
+        {
+            Muest[i].mostrar();
+        }
+        delete[] Muest;
 
         system("pause");
 
@@ -189,12 +200,16 @@ void OpcionSeleccionadaMuestras(int opcionM)
         {
         ArchivoCliente cli;
         Cliente art;
+        Muestra muest;
+        ArchivoMuestra reg;
         rlutil::cls();
         int numCliente,numArticulo,cantArticulos, posicion;
         cout << "Ingrese el numero de ID del cliente: ";
         cin >> numCliente;
         posicion =cli.buscar(numCliente);
         art=cli.BuscarCli(posicion);
+        muest.setNombreCliente(art.getNombreEmpresa());
+        reg.guardar(muest);
         EncabezadoPedidoMuestra();
         art.Mostrar(0);
         if(numCliente==true){
@@ -222,7 +237,6 @@ void OpcionSeleccionadaMuestras(int opcionM)
                 pos3++;
 
             }while(numArticulo !=0);
-
         }
         MyFile.close();
                 system("pause");
@@ -703,4 +717,15 @@ bool ArchivoCsv(fstream MyFile){
         fstream CreateFile("data.csv", ios::out);
     }
     MyFile.open("data.csv",ios::app);
+}
+
+
+void MembreteArchivoMuestra()
+{
+
+    rlutil::cls();
+    cout << " ---------------------------------------------------------------------"<< endl;
+    cout << " | "<< "ID" << " |   " << "Nombre Cliente" << " |     " << "Fecha" << "   |         " << endl;
+    cout << " ---------------------------------------------------------------------"<< endl;
+
 }

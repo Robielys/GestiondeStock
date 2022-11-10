@@ -7,12 +7,15 @@
 class Muestra{
 private:
     int _ID;
-    Fecha _fechaHoy;
     char _NombreCliente[50];
+    Fecha _fechaHoy();
 public:
     void setID(int id);
     void setNombreCliente(string NombreCliente);
+    void setNombCliente(Cliente NombreCliente);
     int getID();
+    void setFechaHoy(Fecha());
+    void getFechaHoy(Fecha());
     string getNombreCliente();
     void mostrar();
 
