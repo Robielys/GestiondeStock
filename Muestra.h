@@ -17,7 +17,7 @@ public:
     string getFechaHoy();
     void setFechaHoy(string aux);
     string getNombreCliente();
-    void mostrar();
+    void mostrar();;
 
 };
 
