@@ -187,7 +187,7 @@
 1667523380 c:\users\robie\onedrive\documentos\github\gestiondestock\archivocliente.h
 	"Cliente.h"
 
-1668121347 source:c:\users\robie\onedrive\documentos\github\gestiondestock\articulo.cpp
+1668121793 source:c:\users\robie\onedrive\documentos\github\gestiondestock\articulo.cpp
 	<iostream>
 	<string.h>
 	"Articulo.h"
@@ -270,7 +270,7 @@
 	"Fecha.h"
 	"ArchivoCliente.h"
 
-1668119848 source:c:\users\robie\onedrive\documentos\github\gestiondestock\muestra.cpp
+1668123731 source:c:\users\robie\onedrive\documentos\github\gestiondestock\muestra.cpp
 	<string>
 	<iostream>
 	<string.h>
@@ -278,12 +278,12 @@
 	"Muestra.h"
 	"fecha.h"
 
-1668119888 c:\users\robie\onedrive\documentos\github\gestiondestock\muestra.h
+1668123837 c:\users\robie\onedrive\documentos\github\gestiondestock\muestra.h
 	"ArchivoArticulo.h"
 	"Fecha.h"
 	"ArchivoCliente.h"
 
-1668117464 source:c:\users\robie\onedrive\documentos\github\gestiondestock\archivomuestra.cpp
+1668123731 source:c:\users\robie\onedrive\documentos\github\gestiondestock\archivomuestra.cpp
 	<iostream>
 	"ArchivoMuestra.h"
 	"Muestra.h"
