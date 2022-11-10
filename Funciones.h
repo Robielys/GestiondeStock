@@ -19,6 +19,7 @@ string espacio(int t, int v);
 void EncabezadoPedidoMuestra();
 bool ArchivoCsv(fstream MyFile);
 void MembreteArchivoMuestra();
+void CategoriaMostrar();
 
 
 

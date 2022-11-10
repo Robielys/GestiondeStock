@@ -14,8 +14,8 @@ void Muestra::setNombreCliente(string NombreCliente)
 {
     strcpy(_NombreCliente, NombreCliente.c_str());
 }
-void getFechaHoy(Fecha()){
-
+void Muestra::setFechaHoy(string aux){
+    _fechaHoy= aux;
 }
 
 int Muestra::getID()

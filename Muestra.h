@@ -8,13 +8,13 @@ class Muestra{
 private:
     int _ID;
     char _NombreCliente[50];
-    Fecha _fechaHoy();
+    string _fechaHoy;
 public:
     void setID(int id);
     void setNombreCliente(string NombreCliente);
     void setNombCliente(Cliente NombreCliente);
     int getID();
-    void setFechaHoy(Fecha());
+    void setFechaHoy(string aux);
     void getFechaHoy(Fecha());
     string getNombreCliente();
     void mostrar();

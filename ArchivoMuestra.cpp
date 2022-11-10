@@ -34,7 +34,9 @@ Muestra ArchivoMuestra::BuscarMuestra(int nroID){
 }
 bool ArchivoMuestra::guardar(Muestra muest)
 {
+    Fecha aux;
     muest.setID(CrearID());
+    muest.setFechaHoy(aux.toString());
 
     FILE* pFile;
     pFile = fopen("Muestras.dat", "ab");

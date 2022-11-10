@@ -150,9 +150,6 @@ void SubMenuCategoria()
     rlutil::cls();
     cout<< "-----------" << " Menu de categoria " << "-----------" << endl;
     cout<< " 1.Lista de categoria" << endl;
-    cout<< " 2.Cargar nueva categoria" << endl;
-    cout<< " 3.Dar de baja una categoria" << endl;
-    cout<< " 4.Modificar una categoria" << endl;
     cout<< "-----------------------------------------" << endl;
     cout<< " 0. Volver al menu principal" << endl;
     cout<< endl;
@@ -452,30 +449,7 @@ void OpcionSeleccionadaCategoria(int opcionCa)
     case 1:
     {
         rlutil::cls();
-
-        system("pause");
-    }
-    break;
-
-    case 2:
-    {
-        rlutil::cls();
-
-        system("pause");
-    }
-    break;
-
-    case 3:
-    {
-        rlutil::cls();
-
-        system("pause");
-    }
-    break;
-
-    case 4:
-    {
-        rlutil::cls();
+        CategoriaMostrar();
 
         system("pause");
     }
@@ -727,5 +701,20 @@ void MembreteArchivoMuestra()
     cout << " ---------------------------------------------------------------------"<< endl;
     cout << " | "<< "ID" << " |   " << "Nombre Cliente" << " |     " << "Fecha" << "   |         " << endl;
     cout << " ---------------------------------------------------------------------"<< endl;
+
+}
+
+void CategoriaMostrar(){
+    rlutil::cls();
+    cout << " --------------"<< endl;
+    cout << " | "<< "Categorias" << " |   " << endl;
+    cout << " --------------"<< endl;
+    cout << "    Tapa"<< endl;
+    cout << "    Pote"<< endl;
+    cout << "    Cremera"<< endl;
+    cout << "    Envase"<< endl;
+    cout << "    Valvula"<< endl;
+    cout << "    Gatillo"<< endl;
+    cout << "    Gotero"<< endl;
 
 }

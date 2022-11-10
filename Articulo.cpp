@@ -108,11 +108,11 @@ void Articulo::Mostrar()
         cout << _Capacidad << "cc" << "      |";
         cout << _Diametro << "mm" << "      |";
         cout << _Stock << "   |" << endl;*/
+        cout << espacio(1,2) <<_ID << espacio(sizeof(Articulo)/40,0);
         if(_ID <10)
         {
             string cat = _Categoria;
 
-            cout << espacio(1,2) <<_ID << espacio(sizeof(Articulo)/40,0);
             if(cat == "Tapa" || cat == "Pote")
             {
                 cout << _Categoria << espacio(sizeof(Articulo)/22,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
@@ -133,9 +133,25 @@ void Articulo::Mostrar()
         }
         else
         {
-            cout << espacio(2,2) <<_ID << espacio(sizeof(Articulo)/40,0)<< _Categoria << espacio(sizeof(Articulo)/30,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                 << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(_Diametro/sizeof(Articulo),0) << _Stock<< endl;
+            string cat = _Categoria;
 
+            if(cat == "Tapa" || cat == "Pote")
+            {
+                cout << _Categoria << espacio(sizeof(Articulo)/22,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
+                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
+
+            }
+            else
+            {
+                if(cat == "Cremera")
+                {
+                    cout << _Categoria << espacio(sizeof(Articulo)/40,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
+                         << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
+                }else{
+                cout << _Categoria << espacio(sizeof(Articulo)/30,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
+                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
+                }
+            }
         }
     }
 }
