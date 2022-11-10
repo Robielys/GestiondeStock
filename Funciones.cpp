@@ -195,6 +195,7 @@ void OpcionSeleccionadaMuestras(int opcionM)
 
     case 2:
         {
+        Fecha aux;
         ArchivoCliente cli;
         Cliente art;
         Muestra muest;
@@ -207,9 +208,9 @@ void OpcionSeleccionadaMuestras(int opcionM)
         art=cli.BuscarCli(posicion);
         muest.setNombreCliente(art.getNombreEmpresa());
         reg.guardar(muest);
-        EncabezadoPedidoMuestra();
+        EncabezadoPedidoMuestra(reg.getCantidad());
         art.Mostrar(0);
-        if(numCliente==true){
+        if(numCliente>0){
             Articulo Art;
             ArchivoArticulo ArcArt;
             int pos=11,pos2=11, pos3=11;
@@ -217,22 +218,25 @@ void OpcionSeleccionadaMuestras(int opcionM)
                rlutil::locate(1,8);
                MembreteArticulo2();
                rlutil::locate(1,pos2);
-               cout << "Ingrese el numero de articulo:";
+               cout << "Ingrese numero de articulo:";
                cin >> numArticulo;
-               rlutil::locate(32,pos3);
-               cout << " Ingrese cantidad de la muestra:";
-               cin >> cantArticulos;
-               posicion = ArcArt.buscar(numArticulo);
-               Art=ArcArt.BuscarArt(posicion);
-               Art.desStock(cantArticulos);
-               ArcArt.guardarModificacion(Art,posicion);
-               rlutil::locate(1,pos);
-               Art.Mostrar(cantArticulos);
-                cout << endl;
-                pos++;
-                pos2++;
-                pos3++;
+                    if (numArticulo > 0)
+                    {
+                        rlutil::locate(32,pos3);
+                        cout << " Ingrese cantidad de la muestra:";
+                        cin >> cantArticulos;
+                        posicion = ArcArt.buscar(numArticulo);
+                        Art=ArcArt.BuscarArt(posicion);
+                        Art.desStock(cantArticulos);
+                        ArcArt.guardarModificacion(Art,posicion);
+                        rlutil::locate(1,pos);
+                        Art.Mostrar(1);
+                        cout << endl;
+                        pos++;
+                        pos2++;
+                        pos3++;
 
+                    }
             }while(numArticulo !=0);
         }
         MyFile.close();
@@ -672,12 +676,12 @@ void MembreteCliente()
 
 }
 
-void EncabezadoPedidoMuestra(){
+void EncabezadoPedidoMuestra(int mID){
     Fecha feHoy;
     rlutil::cls();
     cout << " Pedido de muestra" << endl;
     cout << endl;
-    cout << " ID: " << endl;
+    cout << " ID: " << mID << endl;
     cout << " Fecha de pedido: " << feHoy.toString() << endl;
     cout << " Datos del cliente: " << endl;
     cout << " ---------------------------------------------------------------------"<< endl;
@@ -698,9 +702,9 @@ void MembreteArchivoMuestra()
 {
 
     rlutil::cls();
-    cout << " ---------------------------------------------------------------------"<< endl;
-    cout << " | "<< "ID" << " |   " << "Nombre Cliente" << " |     " << "Fecha" << "   |         " << endl;
-    cout << " ---------------------------------------------------------------------"<< endl;
+    cout << " ---------------------------------------"<< endl;
+    cout << " | "<< "ID" << " |   " << "Nombre Cliente" << " |     " << "Fecha" << "   |" << endl;
+    cout << " ---------------------------------------"<< endl;
 
 }
 

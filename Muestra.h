@@ -15,7 +15,6 @@ public:
     void setNombCliente(Cliente NombreCliente);
     int getID();
     void setFechaHoy(string aux);
-    void getFechaHoy(Fecha());
     string getNombreCliente();
     void mostrar();
 

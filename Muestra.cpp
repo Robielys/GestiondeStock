@@ -27,11 +27,9 @@ string Muestra::getNombreCliente()
     return _NombreCliente;
 }
 
-void Muestra::mostrar(){
-    Fecha aux;
-   cout << "   "<<_ID<<"     ";
-   cout << _NombreCliente<<"    ";
-   cout << aux.toString()<<"       "<<endl;;
-
-
+void Muestra::mostrar()
+{
+    cout << "   "<<_ID<<"     ";
+    cout << _NombreCliente<<endl;
+    ///cout << _fechaHoy<<"       "<<endl;;
 }

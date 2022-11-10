@@ -71,7 +71,7 @@ void Cliente::Mostrar(int c)
         /*cout << _ID << _NombreEmpresa << _Cuit << _Correo << endl;*/
         }
         else{
-            cout << "  Cuit: " << _Cuit << "  Empresa: " << _NombreEmpresa << "  Domicilio: " <<_Correo << endl;
+            cout << "  Cuit: " << _Cuit << "  Empresa: " << _NombreEmpresa << "  Correo: " <<_Correo << endl;
         }
     }
 

@@ -1,5 +1,6 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
+#include"Muestra.h"
 
 void MenuPrincipal();
 void ValidarOpcionesMenu(int OpcionesMenu, int Tam);
@@ -16,7 +17,7 @@ void MembreteArticulo();
 void MembreteArticulo2();
 void MembreteCliente();
 string espacio(int t, int v);
-void EncabezadoPedidoMuestra();
+void EncabezadoPedidoMuestra(int mID);
 bool ArchivoCsv(fstream MyFile);
 void MembreteArchivoMuestra();
 void CategoriaMostrar();

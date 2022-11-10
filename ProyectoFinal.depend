@@ -105,9 +105,10 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1668091218 c:\users\agnostic\documents\github\gestiondestock\funciones.h
+1668112695 c:\users\agnostic\documents\github\gestiondestock\funciones.h
+	"Muestra.h"
 
-1667939516 source:c:\users\agnostic\documents\github\gestiondestock\cliente.cpp
+1668112209 source:c:\users\agnostic\documents\github\gestiondestock\cliente.cpp
 	<iostream>
 	<string.h>
 	"Cliente.h"
@@ -132,7 +133,7 @@
 1667596697 c:\users\agnostic\documents\github\gestiondestock\fecha.h
 	<string>
 
-1668081828 source:c:\users\agnostic\documents\github\gestiondestock\funciones.cpp
+1668113116 source:c:\users\agnostic\documents\github\gestiondestock\funciones.cpp
 	<iostream>
 	<string.h>
 	"rlutil.h"
@@ -255,7 +256,7 @@
 	"Domicilio.h"
 	"Articulo.h"
 
-1668087011 source:c:\users\agnostic\documents\github\gestiondestock\muestra.cpp
+1668110885 source:c:\users\agnostic\documents\github\gestiondestock\muestra.cpp
 	<string>
 	<iostream>
 	<string.h>
@@ -263,7 +264,7 @@
 	"Muestra.h"
 	"fecha.h"
 
-1668087011 c:\users\agnostic\documents\github\gestiondestock\muestra.h
+1668099482 c:\users\agnostic\documents\github\gestiondestock\muestra.h
 	"ArchivoArticulo.h"
 	"Fecha.h"
 	"ArchivoCliente.h"
@@ -290,7 +291,7 @@
 1668029826 c:\users\robie\onedrive\documentos\github\gestiondestock\archivomuestra.h
 	"Muestra.h"
 
-1668086887 source:c:\users\agnostic\documents\github\gestiondestock\archivomuestra.cpp
+1668112209 source:c:\users\agnostic\documents\github\gestiondestock\archivomuestra.cpp
 	<iostream>
 	"ArchivoMuestra.h"
 	"Muestra.h"
