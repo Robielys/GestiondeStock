@@ -18,6 +18,10 @@ void Muestra::setFechaHoy(string aux){
     _fechaHoy= aux;
 }
 
+string Muestra::getFechaHoy(){
+return _fechaHoy;
+}
+
 int Muestra::getID()
 {
     return _ID;
@@ -29,7 +33,8 @@ string Muestra::getNombreCliente()
 
 void Muestra::mostrar()
 {
+
     cout << "   "<<_ID<<"     ";
-    cout << _NombreCliente<<endl;
-    ///cout << _fechaHoy<<"       "<<endl;;
+    cout << _NombreCliente<<"   ";
+    cout << _fechaHoy<<"       "<<endl;
 }

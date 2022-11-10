@@ -206,6 +206,8 @@ void OpcionSeleccionadaMuestras(int opcionM)
         cin >> numCliente;
         posicion =cli.buscar(numCliente);
         art=cli.BuscarCli(posicion);
+        aux.toString();
+        muest.setFechaHoy(aux.toString());
         muest.setNombreCliente(art.getNombreEmpresa());
         reg.guardar(muest);
         EncabezadoPedidoMuestra(reg.getCantidad());
@@ -223,14 +225,14 @@ void OpcionSeleccionadaMuestras(int opcionM)
                     if (numArticulo > 0)
                     {
                         rlutil::locate(32,pos3);
-                        cout << " Ingrese cantidad de la muestra:";
+                        cout << "Ingrese cantidad de la muestra:";
                         cin >> cantArticulos;
                         posicion = ArcArt.buscar(numArticulo);
                         Art=ArcArt.BuscarArt(posicion);
                         Art.desStock(cantArticulos);
                         ArcArt.guardarModificacion(Art,posicion);
                         rlutil::locate(1,pos);
-                        Art.Mostrar(1);
+                        Art.Mostrar(cantArticulos);
                         cout << endl;
                         pos++;
                         pos2++;
