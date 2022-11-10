@@ -187,7 +187,7 @@
 1667523380 c:\users\robie\onedrive\documentos\github\gestiondestock\archivocliente.h
 	"Cliente.h"
 
-1668121793 source:c:\users\robie\onedrive\documentos\github\gestiondestock\articulo.cpp
+1668121347 source:c:\users\robie\onedrive\documentos\github\gestiondestock\articulo.cpp
 	<iostream>
 	<string.h>
 	"Articulo.h"
