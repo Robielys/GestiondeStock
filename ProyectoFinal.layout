@@ -3,6 +3,7 @@
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<File name="Cliente.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="522" topLine="0" />
@@ -174,6 +175,11 @@
 	<File name="rlutil.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="22156" topLine="706" />
+=======
+	<File name="Funciones.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="11379" topLine="428" />
+>>>>>>> 8bc31b0b28fc8066069cae1ae9b4b0f60e2a254b
 		</Cursor>
 	</File>
 >>>>>>> 4a85a4ba62cc6e3801c4b0bfbc04706216f7359e

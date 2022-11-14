@@ -206,7 +206,11 @@ void OpcionSeleccionadaMuestras(int opcionM)
         cin >> numCliente;
         posicion =cli.buscar(numCliente);
         art=cli.BuscarCli(posicion);
+<<<<<<< HEAD
         ///muest.setFechaHoy(aux.getDia());
+=======
+        muest.setFecha(aux);
+>>>>>>> 8bc31b0b28fc8066069cae1ae9b4b0f60e2a254b
         muest.setNombreCliente(art.getNombreEmpresa());
         reg.guardar(muest);
         EncabezadoPedidoMuestra(reg.getCantidad());
@@ -231,7 +235,7 @@ void OpcionSeleccionadaMuestras(int opcionM)
                         Art.desStock(cantArticulos);
                         ArcArt.guardarModificacion(Art,posicion);
                         rlutil::locate(1,pos);
-                        Art.Mostrar(cantArticulos);
+                        Art.Mostrar2(cantArticulos);
                         cout << endl;
                         pos++;
                         pos2++;
@@ -240,28 +244,11 @@ void OpcionSeleccionadaMuestras(int opcionM)
                     }
             }while(numArticulo !=0);
         }
-        MyFile.close();
-                system("pause");
-
-    }
-    break;
-
-    case 3:
-    {
-
-        rlutil::cls();
-
         system("pause");
+
     }
     break;
 
-    case 4:
-    {
-        rlutil::cls();
-
-        system("pause");
-    }
-    break;
 
     case 0:
     {
@@ -454,7 +441,19 @@ void OpcionSeleccionadaCategoria(int opcionCa)
     case 1:
     {
         rlutil::cls();
+        rlutil::cls();
+        ArchivoArticulo art;
+        int cantidad = art.getCantidad();
+        Articulo* Art= new Articulo[cantidad];
+
+        art.listar(Art, cantidad);
         CategoriaMostrar();
+        for(int i=0; i<cantidad; i++)
+        {
+            Art[i].Mostrar(0);
+        }
+        delete[] Art;
+
 
         system("pause");
     }
@@ -482,7 +481,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
         MembreteArticulo();
         for(int i=0; i<cantidad; i++)
         {
-            Art[i].Mostrar();
+            Art[i].Mostrar(1);
         }
         delete[] Art;
 
@@ -527,7 +526,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
 
                     Art=CarArt.BuscarArt(posicion);
                     MembreteArticulo();
-                    Art.Mostrar();
+                    Art.Mostrar(1);
                     Art.setEstado(false);
                     if(CarArt.guardarModificacion(Art, posicion))
                     {
@@ -565,7 +564,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
 
                 Art=CarArt.BuscarArt(posicion);
                 MembreteArticulo();
-                Art.Mostrar();
+                Art.Mostrar(1);
                 cout << "Cantidad a ingresar: ";
                 cin >> can;
                 Art.setStock(can);
@@ -599,7 +598,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
 
                     Art=CarArt.BuscarArt(posicion);
                     MembreteArticulo();
-                    Art.Mostrar();
+                    Art.Mostrar(1);
                     cout << "Cantidad a ingresar: ";
                     cin >> can;
                     Art.desStock(can);
@@ -714,12 +713,5 @@ void CategoriaMostrar(){
     cout << " --------------"<< endl;
     cout << " | "<< "Categorias" << " |   " << endl;
     cout << " --------------"<< endl;
-    cout << "    Tapa"<< endl;
-    cout << "    Pote"<< endl;
-    cout << "    Cremera"<< endl;
-    cout << "    Envase"<< endl;
-    cout << "    Valvula"<< endl;
-    cout << "    Gatillo"<< endl;
-    cout << "    Gotero"<< endl;
 
 }
