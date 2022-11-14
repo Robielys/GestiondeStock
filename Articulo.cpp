@@ -107,17 +107,10 @@ void Articulo::Cargar()
     cin >> _Stock;
     _Estado = true;
 }
-void Articulo::Mostrar()
+void Articulo::Mostrar(int CategoriaM)
 {
-    if(_Estado == true)
+    if(_Estado == true && CategoriaM==1)
     {
-        /*cout << " |  " << _ID << " |";
-        cout << _Categoria << "     |";
-        cout << _Modelo << "      |";
-        cout << _TipoDeMaterial << "       |";
-        cout << _Capacidad << "cc" << "      |";
-        cout << _Diametro << "mm" << "      |";
-        cout << _Stock << "   |" << endl;*/
         cout << espacio(1,2) <<_ID << espacio(sizeof(Articulo)/40,0);
         if(_ID <10)
         {
@@ -163,20 +156,15 @@ void Articulo::Mostrar()
                 }
             }
         }
+    }else {
+        cout <<"  "<< _Categoria<< endl;
     }
 }
 
-void Articulo::Mostrar(int cant)
+void Articulo::Mostrar2(int cant)
 {
     if(_Estado == true)
     {
-        /*cout << " |  " << _ID << " |";
-        cout << _Categoria << "     |";
-        cout << _Modelo << "      |";
-        cout << _TipoDeMaterial << "       |";
-        cout << _Capacidad << "cc" << "      |";
-        cout << _Diametro << "mm" << "      |";
-        cout << _Stock << "   |" << endl;*/
         if(_ID <10)
         {
             string cat = _Categoria;

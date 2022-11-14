@@ -14,12 +14,13 @@ void Muestra::setNombreCliente(string NombreCliente)
 {
     strcpy(_NombreCliente, NombreCliente.c_str());
 }
-void Muestra::setFechaHoy(string aux){
-    _fechaHoy= aux;
+void Muestra::setFecha(Fecha aux){
+    _fecha= aux;
 }
 
-string Muestra::getFechaHoy(){
-return _fechaHoy;
+Fecha Muestra::getFecha(){
+
+return _fecha;
 }
 
 int Muestra::getID()
@@ -36,5 +37,5 @@ void Muestra::mostrar()
 
     cout << "   "<<_ID<<"     ";
     cout << _NombreCliente<<"   ";
-    cout << _fechaHoy<<"       "<<endl;
+    cout << _fecha.toString()<<"       "<<endl;
 }
