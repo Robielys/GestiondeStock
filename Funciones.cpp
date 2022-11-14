@@ -206,8 +206,7 @@ void OpcionSeleccionadaMuestras(int opcionM)
         cin >> numCliente;
         posicion =cli.buscar(numCliente);
         art=cli.BuscarCli(posicion);
-        aux.toString();
-        muest.setFechaHoy(aux.toString());
+        ///muest.setFechaHoy(aux.getDia());
         muest.setNombreCliente(art.getNombreEmpresa());
         reg.guardar(muest);
         EncabezadoPedidoMuestra(reg.getCantidad());

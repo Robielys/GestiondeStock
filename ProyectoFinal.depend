@@ -71,19 +71,19 @@
 1667144969 c:\users\agnostic\desktop\universidad\codeblocks\proyecto de gestion\proyecto\proyectofinal\archivoarticulo.h
 	"Articulo.h"
 
-1667507077 source:c:\users\agnostic\documents\github\gestiondestock\archivoarticulo.cpp
+1668121717 source:c:\users\agnostic\documents\github\gestiondestock\archivoarticulo.cpp
 	<iostream>
 	"ArchivoArticulo.h"
 	"Articulo.h"
 
-1667144969 c:\users\agnostic\documents\github\gestiondestock\archivoarticulo.h
+1668121201 c:\users\agnostic\documents\github\gestiondestock\archivoarticulo.h
 	"Articulo.h"
 
-1668025099 c:\users\agnostic\documents\github\gestiondestock\articulo.h
+1668028406 c:\users\agnostic\documents\github\gestiondestock\articulo.h
 	<cstring>
 	<string.h>
 
-1668090516 source:c:\users\agnostic\documents\github\gestiondestock\articulo.cpp
+1668121793 source:c:\users\agnostic\documents\github\gestiondestock\articulo.cpp
 	<iostream>
 	<string.h>
 	"Articulo.h"
@@ -91,7 +91,7 @@
 	"rlutil.h"
 	"Funciones.h"
 
-1666196231 c:\users\agnostic\documents\github\gestiondestock\rlutil.h
+1666196232 c:\users\agnostic\documents\github\gestiondestock\rlutil.h
 	<iostream>
 	<string>
 	<cstdio>
@@ -105,10 +105,10 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1668112695 c:\users\agnostic\documents\github\gestiondestock\funciones.h
+1668114691 c:\users\agnostic\documents\github\gestiondestock\funciones.h
 	"Muestra.h"
 
-1668112209 source:c:\users\agnostic\documents\github\gestiondestock\cliente.cpp
+1668114691 source:c:\users\agnostic\documents\github\gestiondestock\cliente.cpp
 	<iostream>
 	<string.h>
 	"Cliente.h"
@@ -116,24 +116,24 @@
 	"Funciones.h"
 	"rlutil.h"
 
-1667938129 c:\users\agnostic\documents\github\gestiondestock\cliente.h
+1667940638 c:\users\agnostic\documents\github\gestiondestock\cliente.h
 	"Domicilio.h"
 
-1667923921 source:c:\users\agnostic\documents\github\gestiondestock\domicilio.cpp
+1667927207 source:c:\users\agnostic\documents\github\gestiondestock\domicilio.cpp
 	<iostream>
 	<string.h>
 	"Domicilio.h"
 
-1667923867 c:\users\agnostic\documents\github\gestiondestock\domicilio.h
+1667927207 c:\users\agnostic\documents\github\gestiondestock\domicilio.h
 
-1667596683 source:c:\users\agnostic\documents\github\gestiondestock\fecha.cpp
+1666023778 source:c:\users\agnostic\documents\github\gestiondestock\fecha.cpp
 	"Fecha.h"
 	<ctime>
 
-1667596697 c:\users\agnostic\documents\github\gestiondestock\fecha.h
+1668031341 c:\users\agnostic\documents\github\gestiondestock\fecha.h
 	<string>
 
-1668113116 source:c:\users\agnostic\documents\github\gestiondestock\funciones.cpp
+1668128974 source:c:\users\agnostic\documents\github\gestiondestock\funciones.cpp
 	<iostream>
 	<string.h>
 	"rlutil.h"
@@ -149,19 +149,19 @@
 	"Muestra.h"
 	<fstream>
 
-1668081828 source:c:\users\agnostic\documents\github\gestiondestock\main.cpp
+1668034822 source:c:\users\agnostic\documents\github\gestiondestock\main.cpp
 	<iostream>
 	"Fecha.h"
 	"Funciones.h"
 	"Domicilio.h"
 	"Articulo.h"
 
-1667511153 source:c:\users\agnostic\documents\github\gestiondestock\archivocliente.cpp
+1667523380 source:c:\users\agnostic\documents\github\gestiondestock\archivocliente.cpp
 	<iostream>
 	"Cliente.h"
 	"ArchivoCliente.h"
 
-1667516566 c:\users\agnostic\documents\github\gestiondestock\archivocliente.h
+1667523380 c:\users\agnostic\documents\github\gestiondestock\archivocliente.h
 	"Cliente.h"
 
 1668121717 source:c:\users\robie\onedrive\documentos\github\gestiondestock\archivoarticulo.cpp
@@ -257,7 +257,7 @@
 	"Domicilio.h"
 	"Articulo.h"
 
-1668110885 source:c:\users\agnostic\documents\github\gestiondestock\muestra.cpp
+1668129242 source:c:\users\agnostic\documents\github\gestiondestock\muestra.cpp
 	<string>
 	<iostream>
 	<string.h>
@@ -265,7 +265,7 @@
 	"Muestra.h"
 	"fecha.h"
 
-1668099482 c:\users\agnostic\documents\github\gestiondestock\muestra.h
+1668128623 c:\users\agnostic\documents\github\gestiondestock\muestra.h
 	"ArchivoArticulo.h"
 	"Fecha.h"
 	"ArchivoCliente.h"
@@ -292,12 +292,128 @@
 1668029826 c:\users\robie\onedrive\documentos\github\gestiondestock\archivomuestra.h
 	"Muestra.h"
 
-1668112209 source:c:\users\agnostic\documents\github\gestiondestock\archivomuestra.cpp
+1668129341 source:c:\users\agnostic\documents\github\gestiondestock\archivomuestra.cpp
+	<iostream>
+	<cstring>
+	"ArchivoMuestra.h"
+	"Muestra.h"
+	"Fecha.h"
+
+1668029826 c:\users\agnostic\documents\github\gestiondestock\archivomuestra.h
+	"Muestra.h"
+
+1668121717 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\archivoarticulo.cpp
+	<iostream>
+	"ArchivoArticulo.h"
+	"Articulo.h"
+
+1668121201 c:\users\agnostic\desktop\gestiondestock\gestiondestock\archivoarticulo.h
+	"Articulo.h"
+
+1668028406 c:\users\agnostic\desktop\gestiondestock\gestiondestock\articulo.h
+	<cstring>
+	<string.h>
+
+1667523380 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\archivocliente.cpp
+	<iostream>
+	"Cliente.h"
+	"ArchivoCliente.h"
+
+1667940638 c:\users\agnostic\desktop\gestiondestock\gestiondestock\cliente.h
+	"Domicilio.h"
+
+1667927207 c:\users\agnostic\desktop\gestiondestock\gestiondestock\domicilio.h
+
+1667523380 c:\users\agnostic\desktop\gestiondestock\gestiondestock\archivocliente.h
+	"Cliente.h"
+
+1668123731 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\archivomuestra.cpp
 	<iostream>
 	"ArchivoMuestra.h"
 	"Muestra.h"
 	"Fecha.h"
 
-1668081828 c:\users\agnostic\documents\github\gestiondestock\archivomuestra.h
+1668029826 c:\users\agnostic\desktop\gestiondestock\gestiondestock\archivomuestra.h
 	"Muestra.h"
+
+1668123837 c:\users\agnostic\desktop\gestiondestock\gestiondestock\muestra.h
+	"ArchivoArticulo.h"
+	"Fecha.h"
+	"ArchivoCliente.h"
+
+1668031341 c:\users\agnostic\desktop\gestiondestock\gestiondestock\fecha.h
+	<string>
+
+1668121793 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\articulo.cpp
+	<iostream>
+	<string.h>
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"rlutil.h"
+	"Funciones.h"
+
+1666196232 c:\users\agnostic\desktop\gestiondestock\gestiondestock\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1668114691 c:\users\agnostic\desktop\gestiondestock\gestiondestock\funciones.h
+	"Muestra.h"
+
+1668114691 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\cliente.cpp
+	<iostream>
+	<string.h>
+	"Cliente.h"
+	"ArchivoCliente.h"
+	"Funciones.h"
+	"rlutil.h"
+
+1667927207 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\domicilio.cpp
+	<iostream>
+	<string.h>
+	"Domicilio.h"
+
+1666023778 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\fecha.cpp
+	"Fecha.h"
+	<ctime>
+
+1668119267 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\funciones.cpp
+	<iostream>
+	<string.h>
+	"rlutil.h"
+	"Domicilio.h"
+	"Cliente.h"
+	"Articulo.h"
+	"Funciones.h"
+	"ArchivoArticulo.h"
+	"Cliente.h"
+	"ArchivoCliente.h"
+	"Fecha.h"
+	"ArchivoMuestra.h"
+	"Muestra.h"
+	<fstream>
+
+1668034822 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\main.cpp
+	<iostream>
+	"Fecha.h"
+	"Funciones.h"
+	"Domicilio.h"
+	"Articulo.h"
+
+1668123731 source:c:\users\agnostic\desktop\gestiondestock\gestiondestock\muestra.cpp
+	<string>
+	<iostream>
+	<string.h>
+	"rlutil.h"
+	"Muestra.h"
+	"fecha.h"
 
