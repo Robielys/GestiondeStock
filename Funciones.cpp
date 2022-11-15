@@ -446,7 +446,6 @@ void OpcionSeleccionadaCategoria(int opcionCa)
         CategoriaMostrar();
         for(int i=0; i<cantidad; i++)
         {
-            if()
             Art[i].Mostrar(0);
         }
         delete[] Art;
