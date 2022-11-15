@@ -3,7 +3,7 @@
 #include"Muestra.h"
 
 void MenuPrincipal();
-void ValidarOpcionesMenu(int &OpcionesMenu, int Tam);
+void ValidarOpcionesMenu(int OpcionesMenu, int Tam);
 void OpcionSeleccionada(int OpcionMenu);
 void SubMenuMuestras();
 void SubMenuCliente();
