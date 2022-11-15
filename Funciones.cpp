@@ -32,7 +32,7 @@ void MenuPrincipal()
 
 }
 
-void ValidarOpcionesMenu(int OpcionesMenu, int Tam)
+void ValidarOpcionesMenu(int &OpcionesMenu, int Tam)
 {
     int validar = 1;
     while(validar == 1)
@@ -206,7 +206,11 @@ void OpcionSeleccionadaMuestras(int opcionM)
         cin >> numCliente;
         posicion =cli.buscar(numCliente);
         art=cli.BuscarCli(posicion);
+<<<<<<< HEAD
+        ///muest.setFechaHoy(aux.getDia());
+=======
         muest.setFecha(aux);
+>>>>>>> 8bc31b0b28fc8066069cae1ae9b4b0f60e2a254b
         muest.setNombreCliente(art.getNombreEmpresa());
         reg.guardar(muest);
         EncabezadoPedidoMuestra(reg.getCantidad());
