@@ -301,3 +301,118 @@
 1668081828 c:\users\agnostic\documents\github\gestiondestock\archivomuestra.h
 	"Muestra.h"
 
+1668627103 source:c:\users\agnostic\documents\github\archivoarticulo.cpp
+	<iostream>
+	"ArchivoArticulo.h"
+	"Articulo.h"
+
+1668627094 c:\users\agnostic\documents\github\archivoarticulo.h
+	"Articulo.h"
+
+1668627094 c:\users\agnostic\documents\github\articulo.h
+	<cstring>
+	<string.h>
+
+1668627094 source:c:\users\agnostic\documents\github\archivocliente.cpp
+	<iostream>
+	"Cliente.h"
+	"ArchivoCliente.h"
+
+1668627094 c:\users\agnostic\documents\github\cliente.h
+	"Domicilio.h"
+
+1668627094 c:\users\agnostic\documents\github\domicilio.h
+
+1668627094 c:\users\agnostic\documents\github\archivocliente.h
+	"Cliente.h"
+
+1668627094 source:c:\users\agnostic\documents\github\archivomuestra.cpp
+	<iostream>
+	"ArchivoMuestra.h"
+	"Muestra.h"
+	"Fecha.h"
+
+1668627094 c:\users\agnostic\documents\github\archivomuestra.h
+	"Muestra.h"
+
+1668627094 c:\users\agnostic\documents\github\muestra.h
+	"ArchivoArticulo.h"
+	"Fecha.h"
+	"ArchivoCliente.h"
+
+1668627094 c:\users\agnostic\documents\github\fecha.h
+	<string>
+
+1668627094 source:c:\users\agnostic\documents\github\articulo.cpp
+	<iostream>
+	<string.h>
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"rlutil.h"
+	"Funciones.h"
+
+1668627094 c:\users\agnostic\documents\github\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1668627103 c:\users\agnostic\documents\github\funciones.h
+	"Muestra.h"
+
+1668627094 source:c:\users\agnostic\documents\github\cliente.cpp
+	<iostream>
+	<string.h>
+	"Cliente.h"
+	"ArchivoCliente.h"
+	"Funciones.h"
+	"rlutil.h"
+
+1668627094 source:c:\users\agnostic\documents\github\domicilio.cpp
+	<iostream>
+	<string.h>
+	"Domicilio.h"
+
+1668627094 source:c:\users\agnostic\documents\github\fecha.cpp
+	"Fecha.h"
+	<ctime>
+
+1668627103 source:c:\users\agnostic\documents\github\funciones.cpp
+	<iostream>
+	<string.h>
+	"rlutil.h"
+	"Domicilio.h"
+	"Cliente.h"
+	"Articulo.h"
+	"Funciones.h"
+	"ArchivoArticulo.h"
+	"Cliente.h"
+	"ArchivoCliente.h"
+	"Fecha.h"
+	"ArchivoMuestra.h"
+	"Muestra.h"
+	<fstream>
+
+1668627094 source:c:\users\agnostic\documents\github\main.cpp
+	<iostream>
+	"Fecha.h"
+	"Funciones.h"
+	"Domicilio.h"
+	"Articulo.h"
+
+1668627094 source:c:\users\agnostic\documents\github\muestra.cpp
+	<string>
+	<iostream>
+	<string.h>
+	"rlutil.h"
+	"Muestra.h"
+	"fecha.h"
+
