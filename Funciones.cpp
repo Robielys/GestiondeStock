@@ -635,15 +635,15 @@ void OpcionSeleccionadaArticulos(int opcionA)
         Articulo* Art1= new Articulo[cantidad];
 
         reg.listar(Art1, cantidad);
-        MembreteArticulova();
+        MembreteArticulo();
         for(int i=0; i<cantidad; i++)
         {
             if(Art1[i].getCategoria()== categoria){
                 Art1[i].Mostrar(1);
             }
-
         }
         delete[] Art1;
+        cout<<"No existe categoria"<< endl;
 
         system("pause");
 
