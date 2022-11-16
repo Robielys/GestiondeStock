@@ -32,7 +32,7 @@ void MenuPrincipal()
 
 }
 
-void ValidarOpcionesMenu(int OpcionesMenu, int Tam)
+void ValidarOpcionesMenu(int &OpcionesMenu, int Tam)
 {
     int validar = 1;
     while(validar == 1)
