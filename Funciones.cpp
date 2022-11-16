@@ -163,6 +163,7 @@ void SubMenuArticulos()
     cout<< " 2.Cargar nuevo articulo" << endl;
     cout<< " 3.Dar de baja un articulo" << endl;
     cout<< " 4.Modificar un articulo" << endl;
+    cout<< " 5.Listar por categoria" << endl;
     cout<< "-----------------------------------------" << endl;
     cout<< " 0. Volver al menu principal" << endl;
     cout<< endl;
@@ -446,7 +447,6 @@ void OpcionSeleccionadaCategoria(int opcionCa)
         CategoriaMostrar();
         for(int i=0; i<cantidad; i++)
         {
-            if()
             Art[i].Mostrar(0);
         }
         delete[] Art;
@@ -464,7 +464,7 @@ void OpcionSeleccionadaCategoria(int opcionCa)
 }
 void OpcionSeleccionadaArticulos(int opcionA)
 {
-    ValidarOpcionesMenu(opcionA, 4);
+    ValidarOpcionesMenu(opcionA, 5);
     switch(opcionA)
     {
     case 1:
@@ -622,6 +622,34 @@ void OpcionSeleccionadaArticulos(int opcionA)
         system("pause");
     }
     break;
+
+    case 5:
+    {
+     rlutil::cls();
+        string categoria;
+        cout<<"Ingrese categoria que desea filtar: "<<endl;
+        cin>> categoria;
+
+        ArchivoArticulo reg;
+        int cantidad = reg.getCantidad();
+        Articulo* Art1= new Articulo[cantidad];
+
+        reg.listar(Art1, cantidad);
+        MembreteArticulova();
+        for(int i=0; i<cantidad; i++)
+        {
+            if(Art1[i].getCategoria()== categoria){
+                Art1[i].Mostrar(1);
+            }
+
+        }
+        delete[] Art1;
+
+        system("pause");
+
+    }
+    break;
+
 
     case 0:
     {

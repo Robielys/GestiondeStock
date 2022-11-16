@@ -87,7 +87,6 @@ string ArchivoArticulo::buscar1(string ID)
     }
 }
 
-
 int ArchivoArticulo::getCantidad()
 {
     int cantidad = 0;
