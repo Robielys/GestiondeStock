@@ -555,10 +555,10 @@ void OpcionSeleccionadaArticulos(int opcionA)
                 if(posicion != -1)
                 {
                     cout << "si existe" << endl;
-
+                    rlutil::cls();
                     Art=CarArt.BuscarArt(posicion);
                     MembreteArticulo();
-                    Art.Mostrar(1);
+                    Art.Mostrar(4);
                     Art.setEstado(false);
                     if(CarArt.guardarModificacion(Art, posicion))
                     {
