@@ -221,13 +221,13 @@ void OpcionSeleccionadaMuestras(int opcionM)
             do{
                rlutil::locate(1,8);
                MembreteArticulo2();
-               rlutil::locate(1,pos2);
+               rlutil::locate(23,5);
                cout << "Ingrese numero de articulo:";
                cin >> numArticulo;
                     if (numArticulo > 0)
                     {
-                        rlutil::locate(32,pos3);
-                        cout << "Ingrese cantidad de la muestra:";
+                        rlutil::locate(53,5);
+                        cout << "cantidad de muestra:";
                         cin >> cantArticulos;
                         posicion = ArcArt.buscar(numArticulo);
                         Art=ArcArt.BuscarArt(posicion);
@@ -244,7 +244,7 @@ void OpcionSeleccionadaMuestras(int opcionM)
                     }
             }while(numArticulo !=0);
         }
-        system("pause");
+        ///system("pause");
 
     }
     break;
@@ -398,7 +398,7 @@ void OpcionSeleccionadaCliente(int opcionC)
                     cli=CarCli.BuscarCli(posicion);
                     MembreteCliente();
                     cli.Mostrar(1);
-                    cout << "Cantidad a ingresar: ";
+                    cout << "Ingrese el Nombre de la empresa: ";
                     cin >> can;
                     cli.setNombreEmpresa(can);
                     if(CarCli.guardarModificacion(cli, posicion))
@@ -585,6 +585,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
         cin >> opcion;
         if (opcion == 1)
         {
+            rlutil::cls();
             cout << "Ingresar ID que desea Modificar: ";
             cin >> ID;
 
@@ -593,10 +594,10 @@ void OpcionSeleccionadaArticulos(int opcionA)
             if(posicion != -1)
             {
                 cout << "si existe" << endl;
-
+                rlutil::cls();
                 Art=CarArt.BuscarArt(posicion);
                 MembreteArticulo();
-                Art.Mostrar(1);
+                Art.Mostrar(4);
                 cout << "Cantidad a ingresar: ";
                 cin >> can;
                 Art.setStock(can);
@@ -619,6 +620,7 @@ void OpcionSeleccionadaArticulos(int opcionA)
         {
             if (opcion == 2)
             {
+                rlutil::cls();
                 cout << "Ingresar ID que desea Modificar: ";
                 cin >> ID;
 
@@ -627,10 +629,10 @@ void OpcionSeleccionadaArticulos(int opcionA)
                 if(posicion != -1)
                 {
                     cout << "si existe" << endl;
-
+                    rlutil::cls();
                     Art=CarArt.BuscarArt(posicion);
                     MembreteArticulo();
-                    Art.Mostrar(1);
+                    Art.Mostrar(4);
                     cout << "Cantidad a ingresar: ";
                     cin >> can;
                     Art.desStock(can);
