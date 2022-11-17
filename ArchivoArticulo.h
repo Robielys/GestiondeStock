@@ -7,9 +7,10 @@ public:
     void listar(Articulo* art, int nroRegistro);
     Articulo BuscarArt(int nroID);
     bool guardar(Articulo art);
+    bool guardarCSV(Articulo art);
     bool guardarModificacion(Articulo art, int posicion);
     int buscar(int ID);
-    string buscar1(string ID);
+    bool buscar1(string ID);
     bool baja(int pos);
     int getCantidad();
     int CrearID();

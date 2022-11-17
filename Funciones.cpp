@@ -164,6 +164,7 @@ void SubMenuArticulos()
     cout<< " 3.Dar de baja un articulo" << endl;
     cout<< " 4.Modificar un articulo" << endl;
     cout<< " 5.Listar por categoria" << endl;
+    cout<< " 6.Exportar datos" << endl;
     cout<< "-----------------------------------------" << endl;
     cout<< " 0. Volver al menu principal" << endl;
     cout<< endl;
@@ -643,7 +644,6 @@ void OpcionSeleccionadaArticulos(int opcionA)
             }
         }
         delete[] Art1;
-        cout<<"No existe categoria"<< endl;
 
         system("pause");
 

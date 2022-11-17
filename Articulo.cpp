@@ -90,7 +90,7 @@ void Articulo::Cargar()
     while(validar==0){
     cout << "Ingresar Modelo: ";
     cin >> _Modelo;
-        if(reg.buscar1(_Modelo)==_Modelo){
+        if(reg.buscar1(_Modelo)){
             cout << "este modelo ya existe"<<endl;
         }
         else {

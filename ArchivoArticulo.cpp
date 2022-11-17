@@ -45,6 +45,20 @@ bool ArchivoArticulo::guardar(Articulo art)
     fclose(pFile);
     return true;
 }
+
+bool guardarCSV(Articulo art){
+
+    FILE* pFile;
+    pFile = fopen("Articulos.CSV", "ab");
+    if (pFile == NULL)
+    {
+        return false;
+    }
+    fwrite(&art, sizeof(Articulo), 1, pFile);
+    fclose(pFile);
+    return true;
+}
+
 int ArchivoArticulo::buscar(int ID)
 {
     int i = 0;
@@ -66,7 +80,7 @@ int ArchivoArticulo::buscar(int ID)
     }
     return -1;
 }
-string ArchivoArticulo::buscar1(string ID)
+bool ArchivoArticulo::buscar1(string ID)
 {
     int i = 0;
     Articulo aux;
@@ -81,7 +95,7 @@ string ArchivoArticulo::buscar1(string ID)
         if (aux.getModelo() == ID)
         {
             fclose(pFile);
-            return ID ;
+            return true;
         }
         i++;
     }
