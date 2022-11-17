@@ -32,8 +32,9 @@ public:
     int getStock();
     bool getEstado();
     void Cargar();
-    void Mostrar(int CategoriaM);
-    void Mostrar2(int cant);
+    void Mostrar(int Aumentar);
+    void Mostrar2(int cant, int Aumentar);
+    void Mostrar3(int Aumentar);
     bool modificar();
 };
 

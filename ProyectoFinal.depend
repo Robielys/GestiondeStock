@@ -301,15 +301,15 @@
 1668081828 c:\users\agnostic\documents\github\gestiondestock\archivomuestra.h
 	"Muestra.h"
 
-1668627103 source:c:\users\agnostic\documents\github\archivoarticulo.cpp
+1668712023 source:c:\users\agnostic\documents\github\archivoarticulo.cpp
 	<iostream>
 	"ArchivoArticulo.h"
 	"Articulo.h"
 
-1668627094 c:\users\agnostic\documents\github\archivoarticulo.h
+1668712023 c:\users\agnostic\documents\github\archivoarticulo.h
 	"Articulo.h"
 
-1668627094 c:\users\agnostic\documents\github\articulo.h
+1668718668 c:\users\agnostic\documents\github\articulo.h
 	<cstring>
 	<string.h>
 
@@ -343,7 +343,7 @@
 1668627094 c:\users\agnostic\documents\github\fecha.h
 	<string>
 
-1668627094 source:c:\users\agnostic\documents\github\articulo.cpp
+1668717233 source:c:\users\agnostic\documents\github\articulo.cpp
 	<iostream>
 	<string.h>
 	"Articulo.h"
@@ -365,7 +365,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1668627103 c:\users\agnostic\documents\github\funciones.h
+1668712023 c:\users\agnostic\documents\github\funciones.h
 	"Muestra.h"
 
 1668627094 source:c:\users\agnostic\documents\github\cliente.cpp
@@ -385,7 +385,7 @@
 	"Fecha.h"
 	<ctime>
 
-1668628500 source:c:\users\agnostic\documents\github\funciones.cpp
+1668718668 source:c:\users\agnostic\documents\github\funciones.cpp
 	<iostream>
 	<string.h>
 	"rlutil.h"

@@ -107,93 +107,93 @@ void Articulo::Cargar()
     cin >> _Stock;
     _Estado = true;
 }
-void Articulo::Mostrar(int CategoriaM)
-{
-    if(_Estado == true && CategoriaM==1)
-    {
-        cout << espacio(1,2) <<_ID << espacio(sizeof(Articulo)/40,0);
-        if(_ID <10)
-        {
-            string cat = _Categoria;
-
-            if(cat == "Tapa" || cat == "Pote")
-            {
-                cout << _Categoria << espacio(sizeof(Articulo)/22,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
-
-            }
-            else
-            {
-                if(cat == "Cremera")
-                {
-                    cout << _Categoria << espacio(sizeof(Articulo)/40,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                         << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
-                }else{
-                cout << _Categoria << espacio(sizeof(Articulo)/30,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
-                }
-            }
-        }
-        else
-        {
-            string cat = _Categoria;
-
-            if(cat == "Tapa" || cat == "Pote")
-            {
-                cout << _Categoria << espacio(sizeof(Articulo)/22,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
-
-            }
-            else
-            {
-                if(cat == "Cremera")
-                {
-                    cout << _Categoria << espacio(sizeof(Articulo)/40,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                         << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
-                }else{
-                cout << _Categoria << espacio(sizeof(Articulo)/30,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << _Stock<< endl;
-                }
-            }
-        }
-    }else {
-        cout <<"  "<< _Categoria<< endl;
-    }
-}
-
-void Articulo::Mostrar2(int cant)
+void Articulo::Mostrar(int Aumentar)
 {
     if(_Estado == true)
     {
-        if(_ID <10)
-        {
-            string cat = _Categoria;
+        rlutil::locate(2,Aumentar);
+        cout << "|";
+        rlutil::locate(4,Aumentar);
+        cout << _ID;
+        rlutil::locate(7,Aumentar);
+        cout << "|";
+        rlutil::locate(10,Aumentar);
+        cout << _Categoria;
+        rlutil::locate(19,Aumentar);
+        cout << "|";
+        rlutil::locate(22,Aumentar);
+        cout << _Modelo;
+        rlutil::locate(28,Aumentar);
+        cout << "|";
+        rlutil::locate(31,Aumentar);
+        cout << _TipoDeMaterial;
+        rlutil::locate(39,Aumentar);
+        cout << "|";
+        rlutil::locate(43,Aumentar);
+        cout << _Capacidad;
+        rlutil::locate(51,Aumentar);
+        cout << "|";
+        rlutil::locate(54,Aumentar);
+        cout << _Diametro;
+        rlutil::locate(62,Aumentar);
+        cout << "|";
+        rlutil::locate(65,Aumentar);
+        cout << _Stock;
+        rlutil::locate(69,Aumentar);
+        cout << "|" << endl;
+    }
+}
 
-            cout << espacio(1,2) <<_ID << espacio(sizeof(Articulo)/40,0);
-            if(cat == "Tapa" || cat == "Pote")
-            {
-                cout << _Categoria << espacio(sizeof(Articulo)/22,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << cant<< endl;
+void Articulo::Mostrar2(int cant, int Aumentar)
+{
+    if(_Estado == true)
+    {
+         rlutil::locate(2,Aumentar);
+        cout << "|";
+        rlutil::locate(4,Aumentar);
+        cout << _ID;
+        rlutil::locate(7,Aumentar);
+        cout << "|";
+        rlutil::locate(10,Aumentar);
+        cout << _Categoria;
+        rlutil::locate(19,Aumentar);
+        cout << "|";
+        rlutil::locate(22,Aumentar);
+        cout << _Modelo;
+        rlutil::locate(28,Aumentar);
+        cout << "|";
+        rlutil::locate(31,Aumentar);
+        cout << _TipoDeMaterial;
+        rlutil::locate(39,Aumentar);
+        cout << "|";
+        rlutil::locate(43,Aumentar);
+        cout << _Capacidad;
+        rlutil::locate(51,Aumentar);
+        cout << "|";
+        rlutil::locate(54,Aumentar);
+        cout << _Diametro;
+        rlutil::locate(62,Aumentar);
+        cout << "|";
+        rlutil::locate(65,Aumentar);
+        cout << cant;
+        rlutil::locate(72,Aumentar);
+        cout << "|" << endl;
 
-            }
-            else
-            {
-                if(cat == "Cremera")
-                {
-                    cout << _Categoria << espacio(sizeof(Articulo)/40,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                         << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << cant<< endl;
-                }else{
-                cout << _Categoria << espacio(sizeof(Articulo)/30,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                     << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(sizeof(Articulo)/25,0) << cant<< endl;
-                }
-            }
-        }
-        else
-        {
-            cout << espacio(2,2) <<_ID << espacio(sizeof(Articulo)/40,0)<< _Categoria << espacio(sizeof(Articulo)/30,0)<< _Modelo << espacio(sizeof(Articulo)/20,0)
-                 << _TipoDeMaterial << espacio(sizeof(Articulo)/20,0)<< _Capacidad << "cc" << espacio(sizeof(Articulo)/20,0) << _Diametro << "mm" << espacio(_Diametro/sizeof(Articulo),0) << cant<< endl;
+    }
+}
+void Articulo::Mostrar3(int Aumentar){
+    if(_Estado==true){
 
-        }
+        rlutil::locate(2,Aumentar);
+        cout << "|";
+        rlutil::locate(4,Aumentar);
+        cout << _Categoria;
+        rlutil::locate(15,Aumentar);
+        cout << "|";
+        rlutil::locate(22,Aumentar);
+        cout << _Modelo;
+        rlutil::locate(28,Aumentar);
+        cout << "|"<< endl;
     }
 }
 bool Articulo::modificar(){

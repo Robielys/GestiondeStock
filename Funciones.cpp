@@ -150,6 +150,7 @@ void SubMenuCategoria()
     rlutil::cls();
     cout<< "-----------" << " Menu de categoria " << "-----------" << endl;
     cout<< " 1.Lista de categoria" << endl;
+    cout<< " 2.Listar por categoria" << endl;
     cout<< "-----------------------------------------" << endl;
     cout<< " 0. Volver al menu principal" << endl;
     cout<< endl;
@@ -163,8 +164,6 @@ void SubMenuArticulos()
     cout<< " 2.Cargar nuevo articulo" << endl;
     cout<< " 3.Dar de baja un articulo" << endl;
     cout<< " 4.Modificar un articulo" << endl;
-    cout<< " 5.Listar por categoria" << endl;
-    cout<< " 6.Exportar datos" << endl;
     cout<< "-----------------------------------------" << endl;
     cout<< " 0. Volver al menu principal" << endl;
     cout<< endl;
@@ -189,6 +188,7 @@ void OpcionSeleccionadaMuestras(int opcionM)
             Muest[i].mostrar();
         }
         delete[] Muest;
+        cout<<"  Total de muestras entregadas: "<<cantidad<<endl;
 
         system("pause");
 
@@ -217,6 +217,7 @@ void OpcionSeleccionadaMuestras(int opcionM)
             Articulo Art;
             ArchivoArticulo ArcArt;
             int pos=11,pos2=11, pos3=11;
+            int Aumentar=11;
             do{
                rlutil::locate(1,8);
                MembreteArticulo2();
@@ -233,11 +234,12 @@ void OpcionSeleccionadaMuestras(int opcionM)
                         Art.desStock(cantArticulos);
                         ArcArt.guardarModificacion(Art,posicion);
                         rlutil::locate(1,pos);
-                        Art.Mostrar2(cantArticulos);
+                        Art.Mostrar2(cantArticulos,Aumentar);
                         cout << endl;
                         pos++;
                         pos2++;
                         pos3++;
+                        Aumentar++;
 
                     }
             }while(numArticulo !=0);
@@ -433,7 +435,7 @@ void OpcionSeleccionadaCliente(int opcionC)
 }
 void OpcionSeleccionadaCategoria(int opcionCa)
 {
-    ValidarOpcionesMenu(opcionCa, 4);
+    ValidarOpcionesMenu(opcionCa, 2);
     switch(opcionCa)
     {
     case 1:
@@ -446,17 +448,47 @@ void OpcionSeleccionadaCategoria(int opcionCa)
 
         art.listar(Art, cantidad);
         CategoriaMostrar();
+        int Aumentar = 4;
         for(int i=0; i<cantidad; i++)
         {
-            Art[i].Mostrar(0);
-        }
-        delete[] Art;
+            Art[i].Mostrar3(Aumentar);
+            Aumentar++;
 
+        }
+
+        delete[] Art;
 
         system("pause");
     }
     break;
 
+    case 2:
+    {
+        rlutil::cls();
+        string categoria;
+        cout<<"Ingrese categoria que desea filtar: "<<endl;
+        cin>> categoria;
+
+        ArchivoArticulo reg;
+        int cantidad = reg.getCantidad();
+        Articulo* Art1= new Articulo[cantidad];
+
+        reg.listar(Art1, cantidad);
+        MembreteArticulo();
+        int Aumentar=6;
+        for(int i=0; i<cantidad; i++)
+        {
+            if(Art1[i].getCategoria()== categoria){
+                Art1[i].Mostrar(Aumentar);
+                Aumentar++;
+            }
+        }
+        delete[] Art1;
+
+        system("pause");
+
+    }
+    break;
     case 0:
     {
     }
@@ -465,7 +497,7 @@ void OpcionSeleccionadaCategoria(int opcionCa)
 }
 void OpcionSeleccionadaArticulos(int opcionA)
 {
-    ValidarOpcionesMenu(opcionA, 5);
+    ValidarOpcionesMenu(opcionA, 4);
     switch(opcionA)
     {
     case 1:
@@ -477,9 +509,11 @@ void OpcionSeleccionadaArticulos(int opcionA)
 
         art.listar(Art, cantidad);
         MembreteArticulo();
+        int Aumentar = 4;
         for(int i=0; i<cantidad; i++)
         {
-            Art[i].Mostrar(1);
+            Art[i].Mostrar(Aumentar);
+            Aumentar++;
         }
         delete[] Art;
 
@@ -624,33 +658,6 @@ void OpcionSeleccionadaArticulos(int opcionA)
     }
     break;
 
-    case 5:
-    {
-     rlutil::cls();
-        string categoria;
-        cout<<"Ingrese categoria que desea filtar: "<<endl;
-        cin>> categoria;
-
-        ArchivoArticulo reg;
-        int cantidad = reg.getCantidad();
-        Articulo* Art1= new Articulo[cantidad];
-
-        reg.listar(Art1, cantidad);
-        MembreteArticulo();
-        for(int i=0; i<cantidad; i++)
-        {
-            if(Art1[i].getCategoria()== categoria){
-                Art1[i].Mostrar(1);
-            }
-        }
-        delete[] Art1;
-
-        system("pause");
-
-    }
-    break;
-
-
     case 0:
     {
 
@@ -735,8 +742,8 @@ void MembreteArchivoMuestra()
 
 void CategoriaMostrar(){
     rlutil::cls();
-    cout << " --------------"<< endl;
-    cout << " | "<< "Categorias" << " |   " << endl;
-    cout << " --------------"<< endl;
+    cout << " ---------------------------"<< endl;
+    cout << " | "<< "Categorias" << " |   " <<"Modelo" << "   |"<< endl;
+    cout << " ---------------------------"<< endl;
 
 }
